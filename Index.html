@@ -754,6 +754,529 @@
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(el);
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Hacker WAP | Cyber Security</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Consolas', monospace;
+        }
+        
+        body {
+            background: #0a0a0a;
+            color: #00ff00;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 40, 0, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 60, 0, 0.1) 0%, transparent 20%);
+        }
+        
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #00ff00;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .hacker-title {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+            margin-bottom: 10px;
+            animation: glitch 3s infinite;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #00cc00;
+            margin-bottom: 30px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #003300;
+            color: #00ff00;
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid #00ff00;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+        
+        /* WAP Simulation */
+        .wap-container {
+            background: rgba(0, 20, 0, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+        }
+        
+        .wap-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #00ff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .signal-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 5px;
+            height: 30px;
+        }
+        
+        .bar {
+            width: 10px;
+            background: #00ff00;
+            animation: signal 2s infinite ease-in-out;
+        }
+        
+        .bar:nth-child(1) { height: 10px; animation-delay: 0.1s; }
+        .bar:nth-child(2) { height: 15px; animation-delay: 0.2s; }
+        .bar:nth-child(3) { height: 20px; animation-delay: 0.3s; }
+        .bar:nth-child(4) { height: 25px; animation-delay: 0.4s; }
+        .bar:nth-child(5) { height: 30px; animation-delay: 0.5s; }
+        
+        .wap-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .info-box {
+            background: rgba(0, 30, 0, 0.6);
+            border: 1px solid #008800;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .info-title {
+            color: #00cc00;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-data {
+            color: #00ff00;
+            font-family: monospace;
+            font-size: 1.2rem;
+            word-break: break-all;
+        }
+        
+        /* YouTube Section */
+        .youtube-container {
+            background: rgba(20, 0, 0, 0.8);
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 50px auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+        }
+        
+        .youtube-title {
+            color: #ff0000;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .channel-name {
+            color: #ffffff;
+            background: #ff0000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .subscribe-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ff0000;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .subscribe-btn:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        
+        .hacker-quote {
+            text-align: center;
+            font-style: italic;
+            margin: 30px 0;
+            padding: 20px;
+            border-top: 1px dashed #00ff00;
+            border-bottom: 1px dashed #00ff00;
+            color: #00cc00;
+        }
+        
+        /* Terminal */
+        .terminal {
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            font-family: monospace;
+            height: 200px;
+            overflow-y: auto;
+        }
+        
+        .terminal-line {
+            margin-bottom: 8px;
+            animation: typing 3s steps(40);
+        }
+        
+        .prompt {
+            color: #00ff00;
+        }
+        
+        .command {
+            color: #ffffff;
+        }
+        
+        .output {
+            color: #00cc00;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #003300;
+            color: #008800;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            2% { transform: translate(-2px, 2px); }
+            4% { transform: translate(-2px, -2px); }
+            6% { transform: translate(2px, 2px); }
+            8% { transform: translate(2px, -2px); }
+            10% { transform: translate(0); }
+            100% { transform: translate(0); }
+        }
+        
+        @keyframes signal {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hacker-title { font-size: 2.5rem; }
+            .wap-title, .youtube-title { font-size: 1.7rem; }
+            .wap-container, .youtube-container { padding: 20px; }
+        }
+        
+        @media (max-width: 480px) {
+            .hacker-title { font-size: 1.8rem; }
+            .wap-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Background Effect -->
+    <div class="matrix-bg" id="matrix"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="hacker-title">Ethical Hacker</h1>
+            <p class="subtitle">White Hat Security Specialist | Penetration Tester | Cyber Security Analyst</p>
+            <div class="badge">Certified Ethical Hacker</div>
+        </header>
+        
+        <div class="hacker-quote">
+            <i class="fas fa-quote-left"></i> The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards - and even then I have my doubts. <i class="fas fa-quote-right"></i>
+        </div>
+        
+        <div class="wap-container">
+            <div class="wap-title">
+                <i class="fas fa-wifi"></i> WAP Security Analysis
+                <div class="signal-bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            
+            <div class="wap-info">
+                <div class="info-box">
+                    <div class="info-title">
+                        <i class="fas fa-network-wired"></i> Network Status
+                    </div>
+                    <div class="info-data" id="network-status">SECURE <span style="color:#00ff00; animation: blink 1s infinite;">●</span></div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-title">
+                        <i class="fas fa-shield-alt"></i> Firewall Active
+                    </div>
+                    <div class="info-data">ENABLED ✓</div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-title">
+                        <i class="fas fa-user-secret"></i> Ethical Hacker Badge
+                    </div>
+                    <div class="info-data">VERIFIED <span class="badge" style="font-size:0.8rem; padding: 3px 10px;">BENAR</span></div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-title">
+                        <i class="fas fa-tasks"></i> Security Protocols
+                    </div>
+                    <div class="info-data">WPA3 | AES-256 | 802.1X</div>
+                </div>
+            </div>
+            
+            <div class="terminal">
+                <div class="terminal-line">
+                    <span class="prompt">root@ethical-hacker:~#</span> <span class="command">scan_wap --security-check</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="output">>> Scanning wireless networks...</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="output">>> Target WAP identified: Secure_Network_01</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="output">>> Encryption: WPA3-Enterprise [SECURE]</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="output">>> Vulnerability assessment: No critical issues found</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="output">>> Security status: <span style="color:#00ff00;">PASSED</span></span>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">root@ethical-hacker:~#</span> <span class="command" id="typing-command"></span><span class="prompt">█</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="youtube-container">
+            <div class="youtube-title">
+                <i class="fab fa-youtube"></i> Support My Channel
+            </div>
+            
+            <p style="color: #cccccc; margin-bottom: 20px; line-height: 1.6;">
+                Learn ethical hacking, cyber security, penetration testing, and WAP security on my YouTube channel. 
+                Get tutorials, demonstrations, and security tips to enhance your skills.
+            </p>
+            
+            <div class="channel-name">
+                <i class="fas fa-play-circle"></i> Ethical Hacker TV
+            </div>
+            
+            <p style="color: #cccccc; margin: 20px 0;">
+                Subscribe to stay updated with the latest in cyber security and ethical hacking!
+            </p>
+            
+            <a href="https://www.youtube.com/" target="_blank" class="subscribe-btn">
+                <i class="fab fa-youtube"></i> SUBSCRIBE NOW
+            </a>
+            
+            <div style="margin-top: 25px; color: #ff6666; font-size: 0.9rem;">
+                <i class="fas fa-exclamation-circle"></i> Remember: Always practice ethical hacking on systems you own or have permission to test.
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Ethical Hacker WAP Security | For Educational Purposes Only</p>
+            <p style="margin-top: 10px;">This simulation demonstrates ethical hacking concepts for security awareness.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Matrix background effect
+        const matrixBg = document.getElementById('matrix');
+        const chars = "01";
+        const fontSize = 14;
+        let columns;
+        
+        function setupMatrix() {
+            columns = Math.floor(window.innerWidth / fontSize);
+            matrixBg.innerHTML = '';
+            
+            for (let i = 0; i < columns; i++) {
+                const column = document.createElement('div');
+                column.style.position = 'absolute';
+                column.style.top = '-100px';
+                column.style.left = i * fontSize + 'px';
+                column.style.fontSize = fontSize + 'px';
+                column.style.color = '#00ff00';
+                column.style.fontFamily = 'monospace';
+                column.style.opacity = '0.1';
+                column.style.textShadow = '0 0 5px #00ff00';
+                column.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+                matrixBg.appendChild(column);
+                
+                animateColumn(column);
+            }
+        }
+        
+        function animateColumn(column) {
+            let position = -100;
+            const speed = 2 + Math.random() * 5;
+            const length = 10 + Math.floor(Math.random() * 20);
+            
+            function move() {
+                position += speed;
+                if (position > window.innerHeight) {
+                    position = -100;
+                    column.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+                }
+                
+                column.style.top = position + 'px';
+                
+                // Update characters randomly
+                if (Math.random() > 0.95) {
+                    column.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+                }
+                
+                requestAnimationFrame(move);
+            }
+            
+            move();
+        }
+        
+        // Terminal typing effect
+        const commands = [
+            "nmap -sS -sV 192.168.1.1/24",
+            "aircrack-ng -w rockyou.txt capture.cap",
+            "hydra -l admin -p password 192.168.1.1 http-get",
+            "sqlmap -u 'http://test.com?id=1' --dbs",
+            "john --format=raw-md5 hash.txt",
+            "msfconsole -q -x 'use exploit/multi/handler'"
+        ];
+        
+        let cmdIndex = 0;
+        let charIndex = 0;
+        const typingElement = document.getElementById('typing-command');
+        
+        function typeCommand() {
+            if (charIndex < commands[cmdIndex].length) {
+                typingElement.innerHTML += commands[cmdIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeCommand, 50);
+            } else {
+                setTimeout(deleteCommand, 2000);
+            }
+        }
+        
+        function deleteCommand() {
+            if (typingElement.innerHTML.length > 0) {
+                typingElement.innerHTML = typingElement.innerHTML.substring(0, typingElement.innerHTML.length - 1);
+                setTimeout(deleteCommand, 30);
+            } else {
+                cmdIndex = (cmdIndex + 1) % commands.length;
+                charIndex = 0;
+                setTimeout(typeCommand, 500);
+            }
+        }
+        
+        // Network status change
+        const statusElement = document.getElementById('network-status');
+        const statuses = [
+            "SECURE ●",
+            "MONITORING ●",
+            "SCANNING ●",
+            "ANALYZING ●"
+        ];
+        let statusIndex = 0;
+        
+        function changeStatus() {
+            statusIndex = (statusIndex + 1) % statuses.length;
+            statusElement.innerHTML = statuses[statusIndex];
+            setTimeout(changeStatus, 3000);
+        }
+        
+        // Initialize everything
+        window.addEventListener('load', () => {
+            setupMatrix();
+            typeCommand();
+            changeStatus();
+        });
+        
+        window.addEventListener('resize', setupMatrix);
+    </script>
+</body>
+</html>
         });
     </script>
 </body>
